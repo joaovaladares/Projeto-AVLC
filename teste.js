@@ -44,10 +44,7 @@ for(let i = 0; i < pares.length; i++){
     aux = []
 }
 
-for(let i = 0; i < decode.length; i++){
-    console.log(result[decode[i]])
-}
-console.log(paresOrdenados)
+pares2 = []
 for(let i = 0, j = 0; i < paresOrdenados.length; i++){
     soma = 0
     for(let j = 0; j < paresOrdenados[i].length; j++){
