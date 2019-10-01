@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Projeto AVLC</title>
+
+  <!----------------------------------------------------------------------------------------------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <!----------------------------------------------------------------------------------------------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!----------------------------------------------------------------------------------------------------->
+</head>
+
+<body>
+  <h1>Projeto de AVLC</h1>
+  <p>
+    Frase:
+    <input id="entrada" type="text">
+    <a href="#" id="meu-submit">
+      Cifrar
+    </a>
+  </p>
+
+  <p>
+    Frase Cifrada:
+    <div id="frase">
+    </div>
+  </p>
+</body>
+<script>
+  var socket = io();
+
+  // Evento que é executado ao clicar no botão de enviar
+  document.getElementById("meu-submit").onclick = function (e) {
+    frase_in = document.getElementById("entrada").value;
+    socket.emit('frase', frase_in);
+    e.preventDefault();
+  }
+
+  socket.on('frase-out', function (messages) {
+    $('#frase').empty();
+    $('#frase').append(messages);
+  });
+  
+</script>
+
+</html>
