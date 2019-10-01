@@ -1,0 +1,26 @@
+{
+  "name": "projeto-avlc",
+  "version": "1.0.0",
+  "description": "Grupo: André Vasconcelos(alpvj), Guilherme Afonso(gasp), João Vitor(jvvm), Marcos Prysthon(mvpn)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaovaladares/Projeto-AVLC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaovaladares/Projeto-AVLC/issues"
+  },
+  "homepage": "https://github.com/joaovaladares/Projeto-AVLC#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "socketio": "^1.0.0"
+  }
+}
